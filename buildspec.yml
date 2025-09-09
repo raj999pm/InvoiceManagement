@@ -1,18 +1,14 @@
 version: 0.2
 
 phases:
-  install:
-    commands:
-      # Optional: Install any necessary dependencies here.
-
   pre_build:
     commands:
-      # This command gives the Gradle wrapper executable permissions
+      - echo "Current working directory:"
+      - pwd
       - chmod +x gradlew
-
+      
   build:
     commands:
-      # Now you can execute the gradlew command
       - ./gradlew clean build
 
 artifacts:
